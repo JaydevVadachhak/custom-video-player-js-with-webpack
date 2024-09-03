@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Customized Video Player 2</title>
+    <!-- Links -->
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+  </head>
+  <body>
+    <!-- <div class="loader hide-loader"></div> -->
+    <div class="video-container">
+      <video id="video-element">
+        <source
+          src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+          type="video/mp4"
+        />
+      </video>
+      <div class="custom-video-controls vis-visible">
+        <input
+          type="range"
+          value="0"
+          step="0.01"
+          max="100"
+          class="video-timeline progress-bar"
+        />
+        <div class="left-controls">
+          <div><i class="fas fa-backward icon backward"></i></div>
+          <div><i class="fas fa-play icon play-pause"></i></div>
+          <div><i class="fas fa-forward icon forward"></i></div>
+          <div class="video-timer">
+            <p class="current-time">00:00</p>
+            <p class="separator">&nbsp;/&nbsp;</p>
+            <p class="video-duration">00:00</p>
+          </div>
+        </div>
+        <div class="right-controls">
+          <div>
+            <i class="fa-solid fa-volume-high icon volume"></i>
+          </div>
+          <input
+            type="range"
+            min="0"
+            max="1"
+            step="any"
+            value="1"
+            class="volume-bar"
+            orient="horizontal"
+          />
+          <div class="playback-container">
+            <span class="material-symbols-rounded mat-icon playback-speed"
+              >slow_motion_video</span
+            >
+            <ul class="playback-options d-none">
+              <li data-speed="2">2x</li>
+              <li data-speed="1.5">1.5x</li>
+              <li data-speed="1" class="active">Normal</li>
+              <li data-speed="0.75">0.75x</li>
+              <li data-speed="0.5">0.5x</li>
+            </ul>
+          </div>
+          <div>
+            <span class="pic-in-pic material-icons mat-icon pic-in-pic-icon"
+              >picture_in_picture_alt</span
+            >
+          </div>
+          <!-- <div>
+            <span class="material-symbols-rounded mat-icon expand-icon">
+              expand_content
+            </span>
+          </div> -->
+        </div>
+      </div>
+    </div>
+    <!-- <script src="./index.js"></script> -->
+    <script src="dist/bundle.js"></script>
+  </body>
+</html>
